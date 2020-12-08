@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "taalta loytyy frontend-kamaa",
   "main": "index.js",
-  "homepage": "https://konstanen.github.io/front-end_course_contents",
+  "homepage": "https://kontsanen.github.io/front-end-course",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
    , "deploy": "gh-pages -d dist"
