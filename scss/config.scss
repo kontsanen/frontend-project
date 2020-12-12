@@ -1,7 +1,8 @@
 $primary-color: #202020;
+$darkened-color: #161616;
 $secondary-color: rgb(81, 199, 107);
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/graymountains.png);
 $portrait-image: url(../img/portrait.png);
 $background-opacity: 0.4;
 
@@ -12,9 +13,9 @@ $background-opacity: 0.4;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-            background-image: url("../img/background.jpg");
+            background-image: url("../img/graymountains.png");
            background-attachment: fixed;
-           background-size: cover; 
+           background-size: 100px; 
 
            &:after {
             counter-reset: '';

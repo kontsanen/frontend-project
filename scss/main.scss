@@ -5,19 +5,31 @@
 
 
 
-
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
-    @include background();
+
+
+
+    .primarycol {
+        background: $primary-color;
+    }
     
     
     
-    height: 100%;
+    height: 1000%;
     margin: 0;
     
     color: set-text-color($primary-color);
     font-family: 'Montserrat', Helvetica, sans-serif;
     line-height: 1.5;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 //headings
@@ -38,6 +50,25 @@ h1, h2, h3 {
     }
 }
 
+.otsikko {
+    top: 0;
+    margin: 0;
+    width: 87%;
+    max-width: 900px;
+    text-align: left;
+}
+
+.otsikko3 {
+    font-weight: 600;
+}
+.paaotsikko {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $secondary-color;
+    margin-bottom: 0.3rem;
+   
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -55,8 +86,243 @@ header {
 
 }
 
+#taytto {
+    height: 5000px;
+    width: 200px;
+    z-index: 1000;
+    background: yellow;
+}
+
+.elements {
+    height: 100vh;
+    
+    width: 100%;
+    margin: 0;
+    
+    top: 0;
+    left: 0;
+}
+
+
+#element1 {
+    background: $darkened-color;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(../img/graymountains.png);   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+}
+
+.flex-settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+    
+
+#element2 {
+    flex-wrap: nowrap;
+
+    position: relative;
+    border-bottom: 2px solid $secondary-color;
+
+    background-image: url(../img/graymountains.png);   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+   
+   
+    
+    
+    
+
+}
+
+
+
+#frontcontainer {
+    
+    height: 55vh;
+    position: absolute;
+    
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    align-items: center;
+
+    max-width: 90vw;
+
+    h1, h3 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    .roundbutton {
+        
+        padding: 0.7rem 1.3rem;
+        
+
+        
+        border-radius: 500px;
+        background: $secondary-color;
+        border: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: #343434;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+#element3 {
+    background: $primary-color;   
+    position: absolute;
+    top: calc(200vh + 800px);
+    width: 100%;
+    padding: 0 0 0 0;
+    border-top: 2px solid $secondary-color;
+
+    background-image: url(../img/graymountains.png);   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.effect {
+    background: none;
+    height: 100%;
+    width: 95%;
+    max-width: 900px;
+    margin-top: 0%;
+    
+
+}
+.phonecontainer {
+
+    position: absolute;
+
+    .phonebox {
+    
+    height: 86vh;
+    max-height: 700px;
+
+    
+    
+    }
+}
+
+
+
+.message {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+#message1 {
+   
+    top: 55.8%;
+    left: 8.28%;
+    height: 5.865%;
+    width: 59.1%;
+    
+}
+#message2 {
+    
+    top: 62.8%;
+    height: 6.419%;
+    right: 8.28%;
+    width: 59.1%;
+    
+}
+
+#message3 {
+    
+    top: 70.25%;
+    left: 8.28%;
+    height: 5.865%;
+    width: 59.1%;
+    
+}
+#message4 {
+    
+    top: 78.05%;
+    height: 4.2814%;
+    right: 8.28%;
+    width: 17.4%;
+    
+}
+
+.bubble {
+    width: 200%;
+    height: 200%;
+    
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    top: 50%;
+    left: 50%;
+}
+
+
+.container1 {
+   
+    width: 100%;
+    max-width: 1200px;
+    
+    margin: auto;
+    padding: 0.1rem 3rem;
+    background: purple;
+    
+
+    
+    
+
+
+}
+.container2 {
+display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'left right';
+    
+    grid-template-columns: repeat(2, 1fr);
+    bottom: 3rem;
+    height: 60vh;
+    align-items: bottom;
+    
+
+}
+
+
+
+
 main {
-    padding: 4rem;
+    
+    overflow: hidden;
     //height: 100%;
 
     min-height: calc(100vh - 60px);
@@ -83,14 +349,47 @@ main {
     }
 }
 
+.relative {
+    position: relative;
+    
+    
+    width: 100%;
+    
+}
+
+.relative2 {
+    width: 90%;
+    max-width: 900px;
+    padding: 2rem 4rem;
+
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+
+.projectit {
+    max-width: 900px;
+    
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 .about-info {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+    'bioimage bio'
+    'job1 job2'
+    'job3 job4';
+    grid-template-columns: repeat(2, 1fr);
 
 
 }
@@ -107,6 +406,7 @@ main {
 .bio {
     grid-area: bio;
     font-size: 1.5rem;
+    padding: 0 1rem;
 }
 .job-1 {
     grid-area: job1;
@@ -117,13 +417,16 @@ main {
 .job-3 {
     grid-area: job3;
 }
+.job-4 {
+    grid-area: job4;
+}
 
 
 .job {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
-    border-radius: 0px;
+    background: $darkened-color;
+    padding: 1rem;
+    
+    border-radius: 18px;
 
 }
 
@@ -217,12 +520,67 @@ main {
 #main-footer {
 
     text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 10);
+    padding: 2rem;
+    background: $darkened-color;
     color: set-text-color($primary-color);
-    height: 60px;
+    
 
 }
+
+.footer {
+    margin-top: 70px;
+    border-top: 2px solid $secondary-color;
+    color: #686868;
+    font-size: 15px;
+    
+}
+
+
+.button1 {
+    background: $secondary-color;
+    color: $darkened-color;
+    border: none;
+    border-radius: 500px;
+    padding: 10px 3rem;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+
+
+.left {
+    grid-area: left;
+    height: 250px;
+
+    
+
+}
+
+.right {
+    
+   
+    
+
+    grid-area: right;
+    
+
+    
+        
+        margin: auto;
+        background-image: $portrait-image;
+        padding: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    
+}
+
+
+
 
 
 

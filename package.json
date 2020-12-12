@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "taalta loytyy frontend-kamaa",
   "main": "index.js",
-  
+  "homepage": "https://kontsanen.github.io/front3",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    
+    "deploy": "gh-pages -d dist"
   },
   "author": "Konstanen",
   "license": "MIT",
