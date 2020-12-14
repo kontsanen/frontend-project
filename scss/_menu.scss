@@ -46,7 +46,7 @@
         .btn-line {
             // line 1 - rotate
             &:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
+                transform: rotate(45deg) translate(6px, 5px);
                 
             }
 
@@ -60,7 +60,7 @@
 
             // line 3 - rotate
             &:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
+                transform: rotate(-45deg) translate(4px, -2px);
                 
              }
 
@@ -90,9 +90,11 @@
         align-items: center;
         justify-content: center;
         float: left;
-        width: 50%;
+        width: 35%;
+        
         height: 100vh;
         overflow: hidden;
+        border-bottom: 2px solid $secondary-color;
     }
 
     &-nav {
@@ -100,12 +102,13 @@
         padding: 0;
         background: darken($primary-color, 5);
         list-style: none;
-        transform: translate3d(100%, 0, 0);
+        transform: translate3d(65vw, 0, 0);
+        
         @include easeOut;
 
         &.show {
             // slide from top
-            transform: translate3d(0, 0, 0);
+            transform: translate3d(30vw, 0, 0);
 
         }
     }
@@ -151,17 +154,24 @@
 
     }
 
+    
+
     .nav-link {
 
         display: inline-block;
         position: relative;
-        font-size: 30px;
-        text-transform: uppercase;
+        font-size: 1.2rem;
+        
         padding: 1rem;
         font-weight: 300;
         color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
+        
+      
+        text-align: right;
+
+        
 
         &:hover {
             color: $secondary-color;
@@ -176,9 +186,9 @@
 
 // delay each nav item slide by 0.1s
 
-@for $x from 1 through 4 {
+@for $x from 1 through 5 {
     .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
+        transition-delay: $x * 0.05s;
 
 
     }

@@ -1,8 +1,10 @@
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+var hh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 window.addEventListener('scroll', () => {
 // gets the scrolled pixels
 var scrolled = window.scrollY;
+
+var h = hh*0.75;
 
 // gets the h and w of the window
 

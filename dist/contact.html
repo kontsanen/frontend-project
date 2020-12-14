@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>About me</title>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet"
@@ -14,7 +14,14 @@
 </head>
 <body id="bg-img">
    
-    <header>
+    <header class="menubar">
+        <a class="icon" href="index.html">
+
+            <img src="img/k-8.png" height="100%">
+        </a>
+
+
+
         <div class="menu-btn">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
@@ -24,54 +31,123 @@
         <nav class="menu">
             <div class="menu-branding">
 
-                <div class="portrait"></div>
+                
             </div>
 
             <ul class="menu-nav">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">
+                        <img src="img/k-8.png" height="45px">
+                    </a>
                 </li>
-                <li class="nav-itemt">
+                <li class="nav-item">
                     <a href="about.html" class="nav-link">About me</a>
                 </li>
                 <li class="nav-item">
-                    <a href="work.html" class="nav-link">My work</a>
+                    <a href="work.html" class="nav-link">My projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="other.html" class="nav-link">Other stuff</a>
                 </li>
                 <li class="nav-item current">
-                    <a href="contact.html" class="nav-link">How to reach me</a>
+                    <a href="contact.html" class="nav-link">Contact me</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main id="contact">
-        <h1 class="lg-heading">
-            Contact <span class="text-secondary">Me</span>
+    <main id="about">
+
+        <h1 id="sidepagehead" class="contactheading lg-heading text-secondary">
+            Contact me
         </h1>
-        <h2 class="sm-heading">
-            This is how you can reach me...
+        <h2 id="contacth2" class="contactheading sm-heading">
+            Here is a contact form to contact me
         </h2>
+        
 
-        <div class="boxes">
-           <div>
-               <span class="text-secondary">Email:</span> konstanen@test.com
-           </div>
 
-           <div>
-            <span class="text-secondary">Phone:</span> 123 456 7890
+
+        <div id="form">
+
+            <h3 id="contactheading">Contact form</h3>
+            <h5>Submit for quickest response.</h5>
+        
+
+            <input class="input" type="text" id="name" name="Name" placeholder="Name">
+        </br>
+            <input class="input" type="text" id="email" name="Email" placeholder="Email">
+        </br>
+            <input class="input" type="text" id="phone" name="Phone" placeholder="Phone">
+        </br>
+            <input class="input" type="text" id="organization" name="Organization" placeholder="Organization">
+        </br>
+            <textarea rows="4" cols="50" width="100%" class="input" name="Message" placeholder="Message"></textarea>
+            
+        </br></br>
+            <a class="button1" href="submit.php">Submit</a>
         </div>
-        <div>
-            <span class="text-secondary">Address:</span> konstakatu 50
-        </div>
-        </div>
+
+
 
         
-    </main>
+
+        
+
+        
+    
 
 
-    <footer id="main-footer">Copyright &copy; 2020</footer>
 
 
-    <script src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+<footer class="footer" id="main-footer">Copyright © konstanen 2020</footer>
+
+
+<script src="js/main.js"></script>
 </body>
 </html>

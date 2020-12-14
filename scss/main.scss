@@ -10,12 +10,15 @@ html {
   }
 
 body {
+    background: $primary-color;
+
+    background-image: url(../img/graymountains.png);   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
 
-
-    .primarycol {
-        background: $primary-color;
-    }
+    
     
     
     
@@ -58,9 +61,7 @@ h1, h2, h3 {
     text-align: left;
 }
 
-.otsikko3 {
-    font-weight: 600;
-}
+
 .paaotsikko {
     font-size: 2.5rem;
     font-weight: bold;
@@ -134,7 +135,7 @@ header {
 
     position: relative;
     border-bottom: 2px solid $secondary-color;
-
+    background-color: $primary-color;
     background-image: url(../img/graymountains.png);   
     background-size: cover;
     background-position: center;
@@ -187,6 +188,12 @@ header {
         font-size: 1.3rem;
         color: #343434;
         text-align: center;
+
+        transition-duration: 0.5s;
+
+        &:hover {
+            background: darken($secondary-color, 15);
+        }
     }
 }
 
@@ -199,7 +206,7 @@ header {
 #element3 {
     background: $primary-color;   
     position: absolute;
-    top: calc(200vh + 800px);
+    top: calc(175vh + 798px);
     width: 100%;
     padding: 0 0 0 0;
     border-top: 2px solid $secondary-color;
@@ -393,6 +400,36 @@ main {
 
 
 }
+.about-me {
+    display: flex;
+    width: 100%;
+    
+    margin: auto;
+    padding: 1.3rem 1.3rem 1.3rem 1.3rem;
+
+    display: grid;
+    grid-gap: 30px;
+    
+    grid-template-areas:
+    'bioimage bio bio';
+    
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: $darkened-color;
+    border-radius: 18px;
+
+
+}
+
+.rectangleimg {
+    border-radius: 15px;
+    grid-area: bioimage;
+    margin: auto;
+    
+    border: $secondary-color 3px solid;
+    height: 220px;
+    top: 0;
+}
 
 
 .bio-image {
@@ -400,7 +437,8 @@ main {
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;
-    height: 200px;
+    height: 250px;
+    
 
 }
 .bio {
@@ -420,27 +458,92 @@ main {
 .job-4 {
     grid-area: job4;
 }
+.job-5 {
+    grid-area: job5;
+}
+.job-6 {
+    grid-area: job6;
+}
+
+
 
 
 .job {
     background: $darkened-color;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     
     border-radius: 18px;
+
+    h3 {
+        margin: 0 0 0.7rem 0;
+        color: lighten($secondary-color, 5);
+        
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+    
+
+}
+//projects2
+
+.projects-info {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-gap: 30px;
+    
+    grid-template-columns: repeat(3, 1fr);
+
 
 }
 
 // work/projects
 
+#work {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+    width: 88%;
+
+    
+    
+    
+
+}
+
+#about {
+    max-width: 1000px;
+    margin: auto;
+    
+    width: 85%;
+    
+    
+
+}
+
+#bg-img {
+
+    background-image: url(../img/graymountains.png);   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 .projects {
     display: grid;
     grid-gap: 0.7rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+    
 
     img {
 
         width: 100%;
-        border: 3px #fff solid;
+        border-radius: 18px;
 
         &:hover {
             opacity: 0.5;
@@ -452,7 +555,17 @@ main {
 
 }
 
+#sidepagehead {
+    margin-top: 15vh;
+}
+
 // contact
+
+
+
+#contact {
+
+}
 
 .boxes {
     display: flex;
@@ -493,11 +606,17 @@ main {
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
-    margin-bottom: 0.3rem;
+    margin-top: 0.8rem;
+    
+    text-align: center;
+    transition-duration: 0.3s;
+    
 
     &:hover {
-        background: $secondary-color;
+        background: $primary-color;
         color: set-text-color($secondary-color);
+        border: 1.2px solid $secondary-color;
+        color: $secondary-color;
 
     }
 
@@ -506,15 +625,21 @@ main {
 .btn-dark {
 
     @extend .btn;
-    background: darken($primary-color, 50);
-    color: #fff;
+    
+    color: $primary-color;
+    border-radius: 500px;
+    border: 1.2px solid $secondary-color;
+    background: $secondary-color;
 }
+
 
 .btn-light {
 
     @extend .btn;
-    background: lighten($primary-color, 50);
+    background: lighten($primary-color, 40);
     color: #333;
+    border-radius: 500px;
+    border: 1.2px solid $primary-color;
 }
 
 #main-footer {
@@ -541,11 +666,22 @@ main {
     color: $darkened-color;
     border: none;
     border-radius: 500px;
+    
     padding: 10px 3rem;
     font-family: 'Montserrat', Helvetica, sans-serif;
 
     font-size: 1rem;
     font-weight: 600;
+    margin-top: 0.4rem;
+
+    
+
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background: darken($secondary-color, 15);
+    }
     
 }
 
@@ -578,6 +714,75 @@ main {
 
     
 }
+
+
+//contact
+
+#form {
+    margin-top: 2rem;
+    background: $darkened-color;
+    border-radius: 18px;
+    width: 92%;
+    max-width: 350px;
+    margin: auto;
+    
+    padding: 1.2rem 1.2rem 2rem 1.2rem;
+    
+
+    a {
+        margin: auto;
+    }
+
+    h3 {
+        margin-bottom: 0.2rem;
+
+        
+    }
+
+
+    .input {
+        background: #353535;
+        border-radius: 0.9rem;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: #eeeeee;
+        width: 100%;
+        font-size: 1.05rem;
+        margin-bottom: 0.8rem;
+        
+    }
+
+
+}
+
+
+
+.contactheading {
+
+
+    
+        text-align: center;
+}
+
+#contacth2 {
+    margin-bottom: 3rem;
+}
+::placeholder {
+    color:#aaaaaa;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+::-ms-input-placeholder { 
+    color:#888888;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+   }
+
+textarea {
+    resize: vertical;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+
+
 
 
 
